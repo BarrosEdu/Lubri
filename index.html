@@ -333,11 +333,17 @@
                                 data-validation-required-message="Insira seu telefone" placeholder="Celular"
                                 autocomplete="off">
                         </div>
+                        <div class="form-group">
+                            <label for="">E-mail</label>
+                            <input id="inputemail" class="inputwts form-control" type="text" required="required"
+                                data-validation-required-message="Informe seu e-mail" placeholder="E-mail"
+                                autocomplete="on">
+                        </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group form-group-textarea mb-md-0">
                             <textarea class="form-control" id="inputmensaje"
-                                placeholder="Qual tipo de serviço deseja: *" required="required"
+                                placeholder="Informe: Marca, Modelo, Ano, Motor " required="required"
                                 data-validation-required-message="Mensagem obrigatoria."></textarea>
                             <p class="help-block text-danger"></p>
                         </div>
@@ -373,9 +379,11 @@
 
                 let name = document.querySelector('#inputname').value;
                 let celular = document.querySelector('#inputcelular').value;
+                let email = document.querySelector('#inputemail').value;
+
                 let mensaje = document.querySelector('#inputmensaje').value;
 
-                let url = "https://api.whatsapp.com/send?phone=351938326446&text=Nome: %0A" + name + "%0ACelular: %0A" + celular + "%0A%0AMensagem: %0A" + mensaje + "%0A";
+                let url = "https://api.whatsapp.com/send?phone=351938326446&text=Nome: %0A" + name + "%0ACelular: %0A" + celular + "%0AEmail: %0A" + email + "%0AMensagem: %0A" + mensaje + "%0A";
                 window.open(url);
 
             }
